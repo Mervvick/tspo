@@ -6,29 +6,35 @@
 ### 1. POST signup - регистрация пользователя с ролью user
 
 Дефолтный юзер уже существует
+
 ![image](https://github.com/user-attachments/assets/1417e697-1883-43a9-bac0-d9f4fe0a2edd)
 
 Новый юзер
+
 ![image](https://github.com/user-attachments/assets/e539f6fd-d082-46e9-8981-f2fc69303ce8)
 
 
 ### 2. POST login - получение токена для юзера
 
 Верные данные
+
 ![image](https://github.com/user-attachments/assets/6bed7ee0-adf3-48be-a452-89f650b651b3)
 
 Неверный пароль
+
 ![image](https://github.com/user-attachments/assets/c68e1777-5d4e-48db-9b86-998f201df59c)
 
 
 ### 3. GET products - получение всех товаров (user)
 
 Доступно для роли user
+
 ![image](https://github.com/user-attachments/assets/ef676eee-f234-45c0-a206-4bc352a3207f)
 
 ### 4. DELETE products/{id} - удалении товара (user)
 
 У роли user нет доступа к удалению
+
 ![image](https://github.com/user-attachments/assets/89957459-63d1-40c0-893e-49c026c1c666)
 
 ### 5. POST signup - регистрация пользователя с ролью admin
@@ -42,9 +48,11 @@
 ### 7. DELETE products/{id} - удалении товара (admin)
 
 У админа есть доступ к удалению товаров
+
 ![image](https://github.com/user-attachments/assets/c9e1d379-6423-482d-b5a8-86c7800db7dd)
 
 Проверка
+
 ![image](https://github.com/user-attachments/assets/5b2b9b2d-0828-48f5-b5f6-63591b5cd5cf)
 
 
