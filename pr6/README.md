@@ -1,7 +1,7 @@
-![image](https://github.com/user-attachments/assets/3c46f99a-84b8-4834-abf0-d1afdcf35436)## Практическая работа №6
-### Лапин Д.С. ПИМО-01-24
+# Практическая работа №6
+## Лапин Д.С. ПИМО-01-24
 
-Код 
+### Код 
 ```go
 package main
 
@@ -107,31 +107,31 @@ func deleteProduct(c *gin.Context) {
 
 ```
 
-1. GET products - получение всех товаров
+### 1. GET products - получение всех товаров
 
 ![image](https://github.com/user-attachments/assets/d1ed399c-4d84-4987-88e9-79552a9b67fd)
 
 
-2. GET products/{id} - получение информации о товаре по id
+### 2. GET products/{id} - получение информации о товаре по id
 
 ![image](https://github.com/user-attachments/assets/63e42d53-6894-448d-a873-05e68b92b2d7)
 
 
-3. POST products - создание нового товаров
+### 3. POST products - создание нового товаров
 
 ![image](https://github.com/user-attachments/assets/82af3bd5-95da-4247-8fe9-405236586dba)
 
 ![image](https://github.com/user-attachments/assets/8309e8c8-0b84-4330-b21c-983f6cb50e5f)
 
 
-4. PUT products/{id} - обновление информации о существубщем товаре
+### 4. PUT products/{id} - обновление информации о существубщем товаре
 
 ![image](https://github.com/user-attachments/assets/b27c58d7-6e5b-49fe-b611-33a47282dc91)
 
 ![image](https://github.com/user-attachments/assets/d4c7adde-cd34-4af7-9815-a060a4b8fa62)
 
 
-5. DELETE products/{id} - удаление товара
+### 5. DELETE products/{id} - удаление товара
 
 ![image](https://github.com/user-attachments/assets/cdb8b25d-ecb8-436a-802a-3d692bf9370a)
 
