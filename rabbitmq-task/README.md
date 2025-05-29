@@ -35,13 +35,16 @@ curl -X POST http://localhost:8081/send-email
 ```
 
 
-## Скрины 
+### Скрины 
 
 Отправка сообщения
+
 ![alt text](screenshots/message.png)
 
 Consumer
+
 ![alt text](screenshots/consumer.png)
 
 Producer
+
 ![alt text](screenshots/producer.png)
