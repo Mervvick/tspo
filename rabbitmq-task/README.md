@@ -1,23 +1,30 @@
-# RabbitMQ Task Queue Example
+# RabbitMQ
 
-This example demonstrates using RabbitMQ as a message broker for handling asynchronous email sending tasks.
+Использование RabbitMQ в качестве посредника сообщений для обработки задач асинхронной отправки электронной почты.
 
-## Setup
+## Описание
 
-1. Start RabbitMQ:
+1. Консьюмер предоставляет конечную точку HTTP, которая принимает сведения о задаче по электронной почте
+2. При получении запроса задача сериализуется и помещается в очередь RabbitMQ
+3. Потребитель прослушивает очередь и обрабатывает задачи по электронной почте по мере их поступления
+4. Потребитель подтверждает получение сообщений только после успешной обработки
+
+
+## Запуск
+
+1. Запуск контейнера RabbitMQ:
 docker run -d --hostname my-rabbit --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
-2. Run the consumer in one terminal:
-cd consumer
-go run main.go
+2. Запуск потребителя в 1 терминале:
+`go run main.go`
 
-3. Run the producer in another terminal:
-cd producer
-go run main.go
+3. Запуск производителя в другом терминале:
+`go run main.go`
 
-## Testing
+## Тесты
 
-Send a test email task:
+Отправка сообщения
+```
 curl -X POST http://localhost:8081/send-email
 -H "Content-Type: application/json"
 -d '{
@@ -25,10 +32,16 @@ curl -X POST http://localhost:8081/send-email
 "subject": "Test Email",
 "body": "This is a test email from RabbitMQ task queue"
 }'
+```
 
-## How it works
 
-1. The producer exposes an HTTP endpoint that accepts email task details
-2. When a request is received, it serializes the task and pushes it to a RabbitMQ queue
-3. The consumer listens to the queue and processes email tasks as they arrive
-4. The consumer acknowledges messages only after successful processing
+## Скрины 
+
+Отправка сообщения
+![alt text](screenshots/message.png)
+
+Consumer
+![alt text](screenshots/consumer.png)
+
+Producer
+![alt text](screenshots/producer.png)
