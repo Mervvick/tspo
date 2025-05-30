@@ -32,8 +32,8 @@
 
 Отправка сообщения
 ```
-curl -X POST http://localhost:8081/send-email
--H "Content-Type: application/json"
+curl --max-time 10 -X POST http://localhost:8081/send-email \
+-H "Content-Type: application/json" \
 -d '{
 "to": "user@example.com",
 "subject": "Test Email",
